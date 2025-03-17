@@ -1,12 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20ox;
+    text-align: center;
+}
 .riskCard {
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    display: flex;
-    flex-direction: colum;
-    gap: 5px;
+    padding: 25px;
+    margin: 10px;
+    border: 1px;
+    color: black;
+    display: inline-block;
+    width: 300px;
+    text-align: left;
 }
 
 .low-risk {

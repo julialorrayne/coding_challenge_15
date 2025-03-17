@@ -31,7 +31,7 @@ function addRiskItem(riskName, riskLevel, department) {
         riskCard.classList.add("medium-risk"); // Yellow
     } else if (riskLevel === "High") {
         riskCard.classList.add("high-risk"); // Red
-    }
+    } // changes the color of the card according to the risk level
 
     riskCard.appendChild(nameRisk);
     riskCard.appendChild(levelRisk);
