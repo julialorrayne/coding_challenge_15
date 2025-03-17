@@ -44,3 +44,29 @@ function addRiskItem(riskName, riskLevel, department) {
 addRiskItem("Cybersecurity Threat", "High", "IT");
 addRiskItem("HR Compliance Issue", "Low", "Human Resources");
 
+//Task 5: Implementing Bulk Updates
+document.getElementById("increaseRisks").addEventListener("click", function () {
+
+    const all_risks = document.querySelectorAll(".riskCard"); // this function is selectiong all the risk cards
+
+    all_risks.forEach((riskCard) => {
+        const levelRisk = riskCard.querySelector("p:nth-child(2)"); // this function is selecting the risk level paragraph
+
+        if (levelRisk) {
+            let currentLevel = levelRisk.textContent.replace("Risk Level: ", "").trim(); // it will get the current risk level 
+            let newLevel = currentLevel;
+            if(currentLevel === "Low") {
+                newLevel = "Medium";
+                riskCard.classList.remove("low-risk");
+                riskCard.classList.add("medium-risk");
+            } else if(currentLevel === "Medium") {
+                newLevel = "High";
+                riskCard.classList.remove("medium-risk");
+                riskCard.classList.add("high-risk");
+            }
+            levelRisk.textContent = `Risk Level: ${newLevel}`;
+        }
+    });
+});
+
+addRiskItem("Employee Retention", "Low", "HR");
