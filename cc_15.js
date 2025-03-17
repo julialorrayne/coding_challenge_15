@@ -21,9 +21,16 @@ function addRiskItem(riskName, riskLevel, department) {
 
     const resolveButton = document.createElement("button"); // task 3:added resolve button
     resolveButton.textContent = "Resolve";
-    resolveButton.addEventListener("click", function () {
-        riskCard.remove();
+
+    riskCard.addEventListener("click", function (event) {
+        event.stopPropagation(); //task 6
+        console.log(`You clicked on the ${riskName} risk card`);
     });
+
+    resolveButton.addEventListener("click", function (event) {
+        event.stopPropagation(); //task 6
+    });
+
 //task 4
     if (riskLevel === "Low") {
         riskCard.classList.add("low-risk"); // Green
