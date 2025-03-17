@@ -1,0 +1,24 @@
+.riskCard {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: colum;
+    gap: 5px;
+}
+
+.low-risk {
+    background-color: green;
+}
+
+.medium-risk {
+    background-color: yellow
+}
+
+.high-risk {
+    background-color: red
+}
+
+

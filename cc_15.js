@@ -5,7 +5,7 @@ const riskDashboard = document.getElementById("riskDashboard");
 // Print "Risk Dashboard Loaded" to the console.
 console.log("Risk Dashboard Loaded");
 
-//Task 2 and task 
+//Task 2 and task 3
 function addRiskItem(riskName, riskLevel, department) {
     const riskCard = document.createElement("div");
     riskCard.classList.add("riskCard");
@@ -24,6 +24,14 @@ function addRiskItem(riskName, riskLevel, department) {
     resolveButton.addEventListener("click", function () {
         riskCard.remove();
     });
+//task 4
+    if (riskLevel === "Low") {
+        riskCard.classList.add("low-risk"); // Green
+    } else if (riskLevel === "Medium") {
+        riskCard.classList.add("medium-risk"); // Yellow
+    } else if (riskLevel === "High") {
+        riskCard.classList.add("high-risk"); // Red
+    }
 
     riskCard.appendChild(nameRisk);
     riskCard.appendChild(levelRisk);
@@ -32,3 +40,7 @@ function addRiskItem(riskName, riskLevel, department) {
 
     document.getElementById("riskDashboard").appendChild(riskCard);
 };
+
+addRiskItem("Cybersecurity Threat", "High", "IT");
+addRiskItem("HR Compliance Issue", "Low", "Human Resources");
+
