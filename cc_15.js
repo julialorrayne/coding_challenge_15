@@ -76,4 +76,15 @@ document.getElementById("increaseRisks").addEventListener("click", function () {
     });
 });
 
+// tests: 
+addRiskItem("Data Breach", "High", "IT");
+addRiskItem("Supply Chain Disruption", "Medium", "Operations");
+
+addRiskItem("Market Fluctuations", "High", "Finance");
+// Clicking "Resolve" should remove this risk from the dashboard.
+
+addRiskItem("Cybersecurity Threat", "High", "IT");
+addRiskItem("HR Compliance Issue", "Low", "Human Resources");
+
 addRiskItem("Employee Retention", "Low", "HR");
+// Clicking "Increase Risk Levels" should change it to "Medium".
